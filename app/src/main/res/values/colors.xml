@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="nebr_yellow">#FFCE18</color>
+    <color name="nebr_yellow_dark">#E6B800</color>
+    <color name="nebr_yellow_light">#FFF9E0</color>
+    <color name="nebr_black">#1A1A1A</color>
+    <color name="nebr_gray">#555555</color>
+    <color name="nebr_gray_light">#F5F5F5</color>
+    <color name="nebr_white">#FFFFFF</color>
+    <color name="nebr_text_hint">#999999</color>
+    <color name="nebr_red">#FF3B30</color>
+    <color name="nebr_red_dark">#C62828</color>
+    <color name="nebr_red_light">#FFE5E5</color>
+    <color name="nebr_divider">#E5E5E5</color>
 </resources>

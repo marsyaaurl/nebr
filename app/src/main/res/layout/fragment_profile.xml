@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/nebr_white">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:contentInsetStartWithNavigation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/nebr_yellow"
+                android:fontFamily="@font/dela_gothic_one"
+                app:fontFamily="@font/dela_gothic_one"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/nebr_white"
+        android:padding="@dimen/padding_large"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:text="M"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="@color/nebr_black"
+            android:gravity="center"
+            android:background="@drawable/bg_badge_motor"
+            android:fontFamily="@font/dela_gothic_one"
+            app:fontFamily="@font/dela_gothic_one"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="18dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Marsya"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/nebr_black"
+                android:fontFamily="@font/dela_gothic_one"
+                app:fontFamily="@font/dela_gothic_one"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="2 active routes"
+                android:textSize="@dimen/text_body"
+                android:textColor="@color/nebr_gray"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/nebr_white"
+        android:layout_marginLeft="8dp">
+
+        <TextView
+            android:id="@+id/tvEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textSize="@dimen/text_body"
+            android:textColor="@color/nebr_black"
+            android:padding="@dimen/padding_medium"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/ic_edit_profile"
+            android:drawablePadding="12dp"
+            android:background="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/tvSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="@dimen/text_body"
+            android:textColor="@color/nebr_black"
+            android:padding="@dimen/padding_medium"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/ic_settings"
+            android:drawablePadding="12dp"
+            android:background="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/tvAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Nebr"
+            android:textSize="@dimen/text_body"
+            android:textColor="@color/nebr_black"
+            android:padding="@dimen/padding_medium"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/ic_about"
+            android:drawablePadding="12dp"
+            android:background="?attr/selectableItemBackground"/>
+
+    </LinearLayout>
+
+</LinearLayout>

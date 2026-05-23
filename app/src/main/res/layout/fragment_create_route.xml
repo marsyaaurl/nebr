@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/nebr_white">
+
+    <!-- TOOLBAR -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:title="Create Route"
+        app:titleTextAppearance="@style/ToolbarTitleStyle"
+        app:titleTextColor="@color/nebr_yellow"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:navigationIconTint="@color/nebr_yellow"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_medium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share your daily route!"
+                android:textSize="18sp"
+                android:textColor="@color/nebr_black"
+                android:fontFamily="@font/dela_gothic_one"
+                app:fontFamily="@font/dela_gothic_one"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- ORIGIN -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilOrigin"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Departure Point"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:startIconDrawable="@android:drawable/ic_dialog_map">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etOrigin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- DESTINATION -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDestination"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Destination Point"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:startIconDrawable="@android:drawable/ic_dialog_map">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDestination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:inputType="textPersonName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- WAYPOINTS -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilWaypoints"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Way Points (seperate with coma)"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:helperText="Ex: Pancoran, Semanggi, Kuningan"
+                app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etWaypoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- DEPARTURE TIME & SCHEDULE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDepartureTime"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:hint="Departure Time"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:startIconDrawable="@android:drawable/ic_menu_recent_history">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDepartureTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:inputType="datetime"
+                        android:text="07.00"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSchedule"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:layout_marginStart="6dp"
+                    android:hint="Schedule"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:startIconDrawable="@android:drawable/ic_menu_agenda">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSchedule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:inputType="text"
+                        android:text="Senin–Jumat"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- MONTHLY COST -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCost"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Gas Cost per Month (Rp)"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:helperText="Your hitchhiker will pay you half of your monthly cost"
+                app:startIconDrawable="@android:drawable/ic_menu_save">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TRANSPORT MODE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transportation Mode"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/nebr_black"
+                android:fontFamily="@font/plus_jakarta_sans"/>
+
+            <RadioGroup
+                android:id="@+id/rgTransportMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <RadioButton
+                    android:id="@+id/rbMotorcycle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Motorcycle (🏍)"
+                    android:checked="true"
+                    android:fontFamily="@font/plus_jakarta_sans"/>
+
+                <RadioButton
+                    android:id="@+id/rbCar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Car (🚗)"
+                    android:fontFamily="@font/plus_jakarta_sans"/>
+
+            </RadioGroup>
+
+            <!-- SAVE BUTTON -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveRoute"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="Save Route"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/nebr_white"
+                android:background="@drawable/bg_button"
+                app:backgroundTint="@color/nebr_black"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

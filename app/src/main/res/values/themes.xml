@@ -1,9 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Nebr" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Theme.Nebr" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/nebr_yellow</item>
+        <item name="colorPrimaryVariant">@color/nebr_yellow_dark</item>
+        <item name="colorOnPrimary">@color/nebr_black</item>
+        <item name="colorSurface">@color/nebr_white</item>
+        <item name="android:statusBarColor">@color/nebr_yellow</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
     </style>
-
-    <style name="Theme.Nebr" parent="Base.Theme.Nebr" />
+    <style name="Theme.Nebr.Splash" parent="Theme.Nebr">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="Theme.Nebr.PopupTheme" parent="ThemeOverlay.Material3">
+        <item name="android:popupBackground">@drawable/bg_popup_menu</item>
+    </style>
 </resources>

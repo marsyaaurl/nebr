@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/nebr_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/toolbar_bg">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:menu="@menu/menu_explore"
+            app:popupTheme="@style/Theme.Nebr.PopupTheme">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi, Marsya!"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/nebr_yellow"
+                    android:fontFamily="@font/dela_gothic_one"
+                    app:fontFamily="@font/dela_gothic_one"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Searching your work route?"
+                    android:textSize="18sp"
+                    android:textColor="@color/nebr_gray"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/plus_jakarta_sans"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </LinearLayout>
+
+    <!-- CTA CARD: Got a route to share? -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardAddRoute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/padding_medium"
+        android:layout_marginVertical="@dimen/padding_small"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#EFE8D8"
+        app:cardBackgroundColor="@color/nebr_yellow_light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:background="@color/nebr_black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Got a route to share?"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/nebr_yellow"
+                        android:fontFamily="@font/dela_gothic_one"
+                        app:fontFamily="@font/dela_gothic_one"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Share your route and find hitchhikers!"
+                        android:textSize="12sp"
+                        android:textColor="@color/nebr_white"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        app:fontFamily="@font/plus_jakarta_sans"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="end">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnShareRoute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_button"
+                        android:text="Share Route"
+                        android:textAllCaps="false"
+                        android:textColor="@color/nebr_white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/nebr_yellow"
+                        app:elevation="0dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Explore"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/nebr_black"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:layout_marginTop="12dp">
+
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRoutes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
+
+</LinearLayout>
